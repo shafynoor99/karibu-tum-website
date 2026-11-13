@@ -1,0 +1,579 @@
+{
+  "site": {
+    "name": "Karibu TUM",
+    "university": "Technical University of Mombasa",
+    "tagline": "Your Campus. Your Community. Your Home.",
+    "portal_label": "Student Affairs and Welfare Portal",
+    "main_site": "https://tum.ac.ke/",
+    "email_general": "info@tum.ac.ke",
+    "email_dean": "deanofstudents@tum.ac.ke",
+    "phone_display": "+254 41 2492222",
+    "phone_tel": "+254412492222",
+    "address": "Tom Mboya Street, Tudor, Mombasa",
+    "po_box": "P.O. Box 90420-80100",
+    "location_pending": "Location to be confirmed",
+    "details_pending": "To be confirmed. Contact the Dean's Office for the latest information."
+  },
+
+  "dean": {
+    "name": "Mr. Joel Oluoch Awino",
+    "role": "Dean of Students",
+    "initials": "JA",
+    "portrait": null,
+    "portrait_alt": "Portrait of Mr. Joel Oluoch Awino, Dean of Students",
+    "summary": "The Dean of Students heads the student services department, which is responsible for student welfare matters at Technical University of Mombasa. The Dean's Office works closely with other service departments across the University.",
+    "message": null
+  },
+
+  "student_life": [
+    {
+      "slug": "clubs-societies",
+      "title": "Clubs & Societies",
+      "icon": "users",
+      "short": "Join student groups built around shared interests, talents and causes.",
+      "image": null,
+      "image_alt": "",
+      "hero_intro": "Find people who share your interests and build friendships and skills beyond the classroom.",
+      "about": [
+        "Clubs and societies bring students together around shared interests, talents and causes. They are a way to meet people across programmes, practise leadership and try something new alongside your studies.",
+        "The Dean's Office can point you to the clubs and societies that are active this semester."
+      ],
+      "participate": "Joining details for each club are to be confirmed. Contact the Dean's Office to find out which groups are active and how to join.",
+      "location": null,
+      "gallery": []
+    },
+    {
+      "slug": "sports-recreation",
+      "title": "Sports & Recreation",
+      "icon": "trophy",
+      "short": "Stay active, stay healthy, and make time for play alongside your studies.",
+      "image": "assets/images/student-life/games 04.jpeg",
+      "image_alt": "Technical University of Mombasa students playing basketball on campus",
+      "hero_intro": "Sport and recreation keep you healthy, build teamwork and give you a break from study.",
+      "about": [
+        "TUM students take part in a wide range of sports through the Kenya University Sports Federation (KUSF), including Coast Conference competitions, national championships and specialist events.",
+        "The 2026/2027 KUSF Coast Conference approved calendar includes events hosted at both TUM Main Campus and the Kwale Campus. Students Dan Kipchichir and Patience Mutheu are also attending the 10th Woodball World Cup Championship in Malaysia."
+      ],
+      "participate": "For information about sports participation and the University teams, contact the TUM Sports Officer at sportsofficer@tum.ac.ke.",
+      "location": null,
+      "sports_details": {
+        "season": "2026/2027",
+        "source_note": "Calendar approved by the KUSF Coast Conference; events and venues are as listed in the published calendar.",
+        "proposed_changes": [
+          "The inaugural Coast Women Championship was proposed to count toward accumulated conference points.",
+          "Conference athletics was proposed to be held alongside the indoor games."
+        ],
+        "world_cup": {
+          "event": "10th Woodball World Cup Championship",
+          "location": "Malaysia",
+          "students": [
+            "Dan Kipchichir",
+            "Patience Mutheu"
+          ],
+          "contact": "sportsofficer@tum.ac.ke"
+        },
+        "calendar": [
+          {
+            "date": "August 2026",
+            "activity": "KUSF Coast Conference Symposium & Planning Meeting",
+            "event": "KUSF Coast Conference event",
+            "venue": "Technical University of Mombasa, Kwale Campus"
+          },
+          {
+            "date": "17–20 September 2026",
+            "activity": "4th KUSF Students in Sports Leadership Boot Camps",
+            "event": "KUSF national event (FASU/FISU)",
+            "venue": "Dedan Kimathi University of Science and Technology, Nyeri"
+          },
+          {
+            "date": "3–4 October 2026",
+            "activity": "Hockey (men/women), Handball (men/women), Volleyball (men/women), Baseball5 and Basketball (men)",
+            "event": "KUSF Coast Conference, Leg 1",
+            "venue": "Garissa University"
+          },
+          {
+            "date": "3–4 October 2026",
+            "activity": "Emerging Sports Open Tournament; KUSF Athletics & Field Meet",
+            "event": "KUSF national event",
+            "venue": "Meru University (KUSF Central)"
+          },
+          {
+            "date": "17–19 October 2026",
+            "activity": "6th Annual Netball & Handball Championship",
+            "event": "KUSF national event",
+            "venue": "Dedan Kimathi University of Science and Technology"
+          },
+          {
+            "date": "24–25 October 2026",
+            "activity": "1st Edition KUSF Coast Women Championship: Hockey, Netball, Basketball, Soccer, Handball, Volleyball and Rugby 15s",
+            "event": "KUSF Coast Conference, Leg 2",
+            "venue": "Pwani University"
+          },
+          {
+            "date": "7–8 November 2026",
+            "activity": "Soccer (men), Basketball (men/women), Netball (men), Roll Ball, Rugby 15s (men) and Chess (men/women)",
+            "event": "KUSF Coast Conference, Leg 3",
+            "venue": "Technical University of Mombasa, Main Campus"
+          },
+          {
+            "date": "21–22 November 2026",
+            "activity": "Soccer (men/women), Volleyball (men), Netball (men), Handball (men/women) and Woodball",
+            "event": "KUSF Coast Conference, Leg 4",
+            "venue": "Technical University of Mombasa, Kwale Campus"
+          },
+          {
+            "date": "28–29 November 2026",
+            "activity": "Hockey (men/women), Basketball (men/women), Handball (men), Rugby 15s (men/women) and Netball (women)",
+            "event": "KUSF Coast Conference, Leg 5",
+            "venue": "Taita Taveta University"
+          },
+          {
+            "date": "28–29 November 2026",
+            "activity": "4th KUSF Para Sports Championship",
+            "event": "KUSF national event",
+            "venue": "Western Conference"
+          },
+          {
+            "date": "23–24 January 2027",
+            "activity": "Coast Conference Indoor Championship: racket games, mind games, swimming, martial arts, batting games, ball games, Roll Ball and athletics",
+            "event": "KUSF Coast Conference, Leg 6",
+            "venue": "Lukenya University"
+          },
+          {
+            "date": "30–31 January 2027",
+            "activity": "KUSF National Athletics / AK Cross Country",
+            "event": "KUSF national event",
+            "venue": "South Eastern Kenya University"
+          },
+          {
+            "date": "6–7 February 2027",
+            "activity": "2nd KUSF National Beach Sports: Soccer, Volleyball, Woodball, Beach Tennis, Baseball5 and Handball",
+            "event": "KUSF national event",
+            "venue": "Buntwani, Malindi (KUSF Coast)"
+          },
+          {
+            "date": "13–14 February 2027",
+            "activity": "Soccer (men/women), Volleyball (men/women), Netball (men/women) and Hockey (men)",
+            "event": "KUSF Coast Conference, Leg 7",
+            "venue": "Taita Taveta University"
+          },
+          {
+            "date": "19–21 February 2027",
+            "activity": "National Play-Offs (A): racket sports, martial arts, Rugby 7s and mind games",
+            "event": "KUSF national event",
+            "venue": "Nairobi North"
+          },
+          {
+            "date": "5–7 March 2027",
+            "activity": "16th KUSF National Women Championship",
+            "event": "KUSF national event",
+            "venue": "KUSF Western"
+          },
+          {
+            "date": "25–29 March 2027",
+            "activity": "KUSF National Play-Offs (B)",
+            "event": "KUSF national event",
+            "venue": "KUSF Central"
+          },
+          {
+            "date": "27–29 May 2027",
+            "activity": "3rd KUSF Forum",
+            "event": "KUSF national event",
+            "venue": "KUSF Coast – TUM"
+          },
+          {
+            "date": "11–13 June 2027",
+            "activity": "2nd KUSF National University Staff Games",
+            "event": "KUSF national event",
+            "venue": "KUSF Central – SEKU"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "src": "assets/images/student-life/games 01.jpeg",
+          "alt": "Students playing basketball on an outdoor campus court",
+          "caption": "Basketball on campus"
+        },
+        {
+          "src": "assets/images/student-life/games 02.jpeg",
+          "alt": "Students competing for possession of the basketball",
+          "caption": "Campus basketball"
+        },
+        {
+          "src": "assets/images/student-life/games 03.jpeg",
+          "alt": "TUM students playing basketball near a campus building",
+          "caption": "TUM basketball"
+        },
+        {
+          "src": "assets/images/student-life/games 04.jpeg",
+          "alt": "Students playing basketball on campus",
+          "caption": "Basketball action"
+        },
+        {
+          "src": "assets/images/student-life/games 07.jpeg",
+          "alt": "Students playing a women's basketball game outdoors",
+          "caption": "Women's basketball"
+        },
+        {
+          "src": "assets/images/student-life/games girls.jpeg",
+          "alt": "Two TUM athletes at the 2026 Woodball World Cup in Malaysia",
+          "caption": "TUM at the Woodball World Cup"
+        }
+      ]
+    },
+    {
+      "slug": "student-association",
+      "title": "Student Association",
+      "icon": "megaphone",
+      "short": "Learn how TUMSA represents students, supports welfare and provides ways to participate in University life.",
+      "image": "screenshots/tumsa.png",
+      "image_alt": "TUMSA Comrades Project Alliance student banner",
+      "hero_intro": "The Technical University of Mombasa Students Association (TUMSA) represents students, advocates for their welfare and provides a democratic channel for student participation.",
+      "about": [
+        "TUMSA is the students’ representative association at the Technical University of Mombasa. Guided by its Constitution, it works to represent students’ rights, interests and aspirations and to provide a democratic way to raise concerns and contribute to University life.",
+        "The Association brings students together while respecting different backgrounds, cultures, beliefs and abilities. Its work is guided by transparency, accountability, participation, integrity and social justice."
+      ],
+      "participate": "Connect with your School, Institute, hall or campus representative; attend student meetings and forums; participate in elections; and contribute to approved welfare, sports, entertainment and community-service activities. Consult the TUMSA Constitution through the University or TUMSA for details of membership and governance.",
+      "location": null,
+      "association_details": {
+        "sections": [
+          {
+            "title": "Student representation",
+            "paragraphs": [
+              "TUMSA’s constitutional structures provide ways for students to share concerns and participate in decisions affecting student life."
+            ],
+            "points": [
+              "The Student Council carries out leadership and day-to-day functions assigned by the Constitution and engages with relevant University offices on student affairs and welfare.",
+              "The TUMSA Congress is the Association’s supreme policy-making organ under the Constitution, bringing student representatives together for deliberation and policy decisions.",
+              "School and Institute representatives communicate students’ views and academic concerns. Other constituencies include halls of residence, satellite campuses, students with special needs and religious groups, as provided for in the Constitution."
+            ]
+          },
+          {
+            "title": "Student welfare",
+            "paragraphs": [
+              "TUMSA liaises with relevant University departments and offices on matters affecting students’ everyday welfare."
+            ],
+            "points": [
+                "Accommodation and conditions in halls of residence and outside hostels.",
+                "Catering and access to affordable meals.",
+                "Health, hygiene, clean water and access to health services.",
+                "Coordination when students experience sickness or bereavement."
+            ]
+          },
+          {
+            "title": "Inclusion and student activities",
+            "paragraphs": [
+              "The Constitution provides for representation of students with special needs and promotes their integration into the University community. TUMSA can raise accessibility and inclusion concerns with the Association and appropriate University bodies.",
+              "TUMSA also supports student interaction through sports, tournaments, entertainment and approved activities. These provide opportunities for teamwork, talent development and community participation."
+            ],
+            "points": [
+              "Encourage academic excellence, research, and the development of artistic and professional talents.",
+              "Promote freedom of expression, association, conscience and academic liberty within applicable laws and University regulations.",
+              "Build unity among students from different backgrounds and foster constructive relationships with University staff and the wider public.",
+              "Encourage community service and cooperation with TUM alumni."
+            ]
+          },
+          {
+            "title": "Elections and accountability",
+            "paragraphs": [
+              "TUMSA leadership and representation are established through constitutional processes, including elections. The Constitution provides for a University Electoral Commission to oversee specified student elections and procedures.",
+              "This page is an accessible overview based on the TUMSA Constitution (April 2020), not a replacement for the Constitution. Refer to the Constitution through the University or TUMSA for complete information on membership, rights, responsibilities and governance."
+            ],
+            "points": []
+          }
+        ],
+        "commitment": "Connect with your student representatives, take part in TUMSA activities and help make student life better for everyone."
+      },
+      "gallery": []
+    }
+  ],
+
+  "student_services": [
+    {
+      "slug": "guidance-counselling",
+      "title": "Guidance & Counselling",
+      "icon": "message",
+      "short": "Confidential guidance and counselling support for TUM students.",
+      "image": "assets/images/student-life/mental health walk.jpg",
+      "image_alt": "TUM community participating in a mental health awareness walk",
+      "hero_intro": "Confidential mental health and wellbeing support for students, staff and the wider community.",
+      "about": [
+        "The TUM Mental Health and Well-Being Centre promotes holistic psychological wellbeing across the University community. Its work includes prevention, early intervention, counselling, crisis response, education, research and community engagement.",
+        "The Centre provides confidential, professional and compassionate support. Reaching out for help is a sign of strength, and you do not need to wait until things become overwhelming."
+      ],
+      "access": "Book a virtual or in-person session through the TUM Mental Health and Well-Being Centre website. For support by phone or email, use the contact details on this page.",
+      "emergency_notice": "If you or someone else is in immediate danger, call the Kenya emergency numbers 999 or 112.",
+      "location": "Tom Mboya Street, Tudor, Mombasa. P.O. Box 90420-80100, Mombasa-Kenya.",
+      "hours": "Monday–Friday, 7:00 AM–6:00 PM.",
+      "hours_label": "Service hours",
+      "contact": {
+        "emails": [
+          "info@tum.ac.ke"
+        ],
+        "phones": [
+          "+254 724 955377",
+          "+254 733 955377"
+        ]
+      },
+      "wellbeing_details": {
+        "website": "https://counselling.tum.ac.ke",
+        "vision": "To be a leading centre of excellence in promoting holistic mental health and wellbeing for students, staff and the wider community.",
+        "mission": "To foster psychological resilience and wellbeing through prevention, early intervention, counselling, crisis response, education, research and community engagement.",
+        "service_groups": [
+          {
+            "title": "Mental wellness and promotion",
+            "services": [
+              "Awareness campaigns, workshops and digital resources.",
+              "Peer Wellness Educators and student support."
+            ]
+          },
+          {
+            "title": "Counselling services",
+            "services": [
+              "Confidential, professional and compassionate mental health care.",
+              "Counselling for individuals, couples, families and groups."
+            ]
+          },
+          {
+            "title": "HIV, sexual and reproductive health, and GBV",
+            "services": [
+              "Confidential HIV testing and counselling.",
+              "Sexual and reproductive health and family-planning support.",
+              "Gender-based violence crisis response, trauma therapy and referral pathways."
+            ]
+          },
+          {
+            "title": "Learning and research",
+            "services": [
+              "Evidence-based applied research.",
+              "Insights on psychological trends for students and staff."
+            ]
+          }
+        ],
+        "care_approach": [
+          "Student- and staff-centred care.",
+          "Prevention and early intervention.",
+          "Crisis response and engagement."
+        ],
+        "tagline": "We listen, We don’t judge.",
+        "quote": "Your Mental Health Matters. Hakuna shame comrade aki struggle na Mental Health issues. Seeking help is strength."
+      },
+      "gallery": [
+        {
+          "src": "assets/images/student-life/guidance 01.jpg",
+          "alt": "Guidance and counselling at TUM",
+          "caption": "Guidance and counselling"
+        },
+        {
+          "src": "assets/images/student-life/guidance 02.jpg",
+          "alt": "Student wellbeing support at TUM",
+          "caption": "Student wellbeing support"
+        },
+        {
+          "src": "assets/images/student-life/guidance 03.png",
+          "alt": "Mental health and wellbeing at TUM",
+          "caption": "Mental health and wellbeing"
+        },
+        {
+          "src": "assets/images/student-life/mental health walk.jpg",
+          "alt": "TUM community participating in a mental health awareness walk",
+          "caption": "Mental health awareness walk"
+        }
+      ],
+      "sub_services": []
+    },
+    {
+      "slug": "hostels-accommodation",
+      "title": "Hostels & Accommodation",
+      "icon": "home",
+      "short": "Comfortable hostels and help finding off-campus housing near the University.",
+      "image": "assets/images/uhuru hostel.jpeg",
+      "image_alt": "Uhuru Hostel at the Technical University of Mombasa",
+      "hero_intro": "Find safe, affordable and student-friendly accommodation while you pursue your academic goals.",
+      "about": [
+        "The Accommodation Section provides clean, safe and student-friendly hostel accommodation to support students during their studies. On-campus bed spaces are limited, and the University also assists students to identify private hostels near campus.",
+        "Priority consideration for on-campus accommodation is given to students with special needs and international students, in consultation with the Office of the Dean of Students."
+      ],
+      "access": "Reserve a bed through the University's Online Room Reservation Portal. After a successful reservation, pay the accommodation fee through the e-Citizen platform. For private hostel options near the University, contact the Accommodation Section for assistance.",
+      "location": "Accommodation Office: near the Dining Hall. Janitors' Office: next to the Health Unit and Block SE (Umoja), Ground Floor.",
+      "hours_label": "Resident support",
+      "hours": "Resident students are supported day and night. During official working hours, visit the Accommodation Office. After hours, hostel Janitors supervise the hostels and attend to urgent matters and student grievances, including weekends and public holidays.",
+      "contact": {
+        "emails": [
+          "accommodationsupport@tum.ac.ke",
+          "accommodation@tum.ac.ke"
+        ]
+      },
+      "accommodation_details": {
+        "vision": "To become a model accommodation services unit among institutions of higher learning in Kenya.",
+        "mission": "To provide high-quality, affordable and reasonably priced accommodation to students and visiting groups.",
+        "services": [
+          "Maintaining cleanliness and hygiene in hostels and surrounding areas.",
+          "Helping students arrange private hostel accommodation.",
+          "Providing friendly, experienced and supportive accommodation staff.",
+          "Providing continuous hostel supervision to support a safe and conducive living environment."
+        ],
+        "student_rates": [
+          {
+            "category": "Category 1",
+            "rate": "KSh 10,000 per student per semester"
+          },
+          {
+            "category": "Category 2",
+            "rate": "KSh 6,750 per student per semester"
+          }
+        ],
+        "visitor_rate": "KSh 350–500 per person per night during holiday breaks.",
+        "cooking_notice": "Cooking is strictly prohibited in the hostels.",
+        "cafeteria": "A cafeteria is available within the University compound, offering meals on a pay-as-you-eat basis."
+      },
+      "gallery": [
+        {
+          "src": "assets/images/student-life/hostels.jpg",
+          "alt": "Exterior of Uhuru Hostel",
+          "caption": "Uhuru Hostel"
+        },
+        {
+          "src": "assets/images/girls hostel.jpeg",
+          "alt": "Exterior view of the girls' hostel",
+          "caption": "Girls' Hostel"
+        },
+        {
+          "src": "assets/images/student-life/hostel 2.jpg",
+          "alt": "Hostel accommodation building and courtyard",
+          "caption": "Hostel accommodation"
+        }
+      ],
+      "sub_services": [
+        {
+          "title": "On-campus hostels",
+          "description": "Comfortable hostel accommodation provided by the University."
+        },
+        {
+          "title": "Off-campus housing assistance",
+          "description": "Help finding housing near the University if you live off campus."
+        }
+      ]
+    },
+    {
+      "slug": "health-unit",
+      "title": "Health Unit",
+      "icon": "health",
+      "short": "On-campus primary healthcare and wellness support.",
+      "image": "assets/images/services/Health 02.png",
+      "image_alt": "Exterior of the TUM Health Unit building",
+      "hero_intro": "Primary healthcare, clinical services and wellness support for the TUM community.",
+      "about": [
+        "The Technical University of Mombasa Health Centre is a registered Level 2 medical facility serving the University community. From its beginnings as a small dispensary, it has grown to a team of approximately 10 healthcare professionals, with a strategic objective to transition to a Level 3 hospital by 2028.",
+        "The Health Services Department provides primary care to eligible students, staff and covered dependants at the Main Campus in Mombasa and through a satellite clinic at the Kwale Campus Extension."
+      ],
+      "access": "Students attending for the first time should bring a valid TUM Student ID or proof of current-session registration, such as a fee statement or registration slip. Returning students should bring their TUM Hospital Card and Student ID. Students are expected to be registered with SHA/SHIF, directly or as a dependant. Staff and dependants are served under medical insurance covers accepted by the facility.",
+      "emergency_notice": "For emergencies after 5:00 PM or on weekends, call the Health Centre In-Charge, Dr. Rerimoi, on 0721 848 952. You can also contact the TUM Security Officer on duty, who will alert the healthcare provider on call. For life-threatening emergencies, seek emergency assistance immediately.",
+      "location": "Main Campus, Mombasa; and the satellite clinic at the Kwale Campus Extension.",
+      "hours": "Monday–Friday, 8:00 AM–5:00 PM. Closed weekends and public holidays.",
+      "contact": {
+        "name": "Dr. Rerimoi (In-Charge)",
+        "phone": "0721 848 952",
+        "email": "healthcentre@tum.ac.ke"
+      },
+      "health_details": {
+        "facility_level": "Registered Level 2 medical facility, with a strategic objective to transition to Level 3 by 2028.",
+        "eligibility": [
+          "Registered TUM students currently in session.",
+          "University staff and covered dependants."
+        ],
+        "student_requirements": [
+          "First visit: valid TUM Student ID, or proof of current-session registration such as a fee statement or registration slip.",
+          "Revisit: TUM Hospital Card issued at the first visit and Student ID.",
+          "Students are expected to be registered under SHA/SHIF, either directly or as dependants under a parent or guardian."
+        ],
+        "services": [
+          "Triage and nursing care, including preliminary vital signs, temperature and blood-pressure checks.",
+          "Outpatient consultation, diagnosis and treatment by Clinical Officers and Clinical Assistants.",
+          "Consultations with a visiting Gynecological Consultant.",
+          "Registered pharmacy services; if a medicine is out of stock, an official prescription is provided for external purchase.",
+          "Basic diagnostic investigations and clinical laboratory tests.",
+          "Wound dressing and minor procedures for minor trauma, burns and surgical dressings.",
+          "TB screening, monitoring and treatment referral.",
+          "Voluntary, confidential HIV Testing and Counselling Services (HTS), including pre- and post-test counselling and wellness guidance."
+        ],
+        "workflow": [
+          "Registration and SHA check",
+          "Triage and preliminary care",
+          "Clinician consultation and diagnosis",
+          "Pharmacy, laboratory or HTS service as needed",
+          "Discharge or referral to a Level 3 or 4 facility"
+        ],
+        "insurance": [
+          "Social Health Authority (SHA)",
+          "UAP Old Mutual",
+          "AAR Insurance",
+          "Madison Insurance",
+          "Jubilee Health",
+          "First Assurance"
+        ],
+        "after_hours_contact": "0721 848 952",
+        "referral_hospitals": [
+          "Tudor Sub-County Hospital",
+          "Coast General Teaching & Referral Hospital (CGTRH)",
+          "Nearby Level 3 or 4 facilities near the student's residence"
+        ],
+        "service_limit": "Maternal, antenatal and delivery services are not offered on-site. Referrals are issued for specialized reproductive health services."
+      },
+      "gallery": [
+        {
+          "src": "assets/images/services/health 01.png",
+          "alt": "Entrance to the TUM Health Unit",
+          "caption": "TUM Health Unit entrance"
+        },
+        {
+          "src": "assets/images/services/Health 02.png",
+          "alt": "Exterior of the TUM Health Unit building",
+          "caption": "Health Unit building"
+        },
+        {
+          "src": "assets/images/services/Health 03.png",
+          "alt": "Interior corridor at the TUM Health Unit",
+          "caption": "Inside the Health Unit"
+        }
+      ],
+      "sub_services": []
+    },
+    {
+      "slug": "customer-care",
+      "title": "Customer Care",
+      "icon": "headset",
+      "short": "A first point of contact for questions, feedback and finding the right office.",
+      "image": "assets/images/services/customer care.jpeg",
+      "image_alt": "Customer care service at the Technical University of Mombasa",
+      "hero_intro": "Not sure who to ask? Start here.",
+      "about": [
+        "Customer Care is a first point of contact for questions and feedback about student services, and for finding the right office.",
+        "Service standards and response times are to be confirmed."
+      ],
+      "access": "Contact arrangements are to be confirmed. In the meantime, use the Dean's Office email or phone number on this page.",
+      "location": null,
+      "hours": null,
+      "contact": null,
+      "gallery": [],
+      "sub_services": []
+    }
+  ],
+
+  "staff": [
+    {
+      "name": "Mr. Joel Oluoch Awino",
+      "role": "Dean of Students",
+      "initials": "JA",
+      "portrait": null,
+      "portrait_alt": "Portrait of Mr. Joel Oluoch Awino, Dean of Students",
+      "email": "deanofstudents@tum.ac.ke",
+      "phone": null
+    }
+  ],
+
+  "events": [],
+  "announcements": [],
+  "resources": []
+}
