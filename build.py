@@ -571,7 +571,7 @@ def build_dean():
                  root, tagline="Office of the Dean of Students",
                  actions=(f'<a class="btn btn-primary" href="#services">Explore our services {ic("arrow")}</a>'
                           f'<a class="btn btn-secondary" href="{L(root, "contact-support")}">Contact the office</a>'),
-                 photo=find_first("assets/images/hero", {"deans-office", "dean-hero"}),
+                 background_photo="assets/images/Bright Dean’s Office Waiting Hall.png",
                  crumbs=breadcrumbs(root, [("Home", L(root)), ("Dean's Office", "")]))
 
         reach = (f'<div class="side-panel"><h3>Reach the office</h3><p>Contact details for general enquiries.</p>'
@@ -591,6 +591,18 @@ def build_dean():
               f'<h2 id="svc-h">{e("Dean's Office services")}</h2><p>Access key services and support.</p></div></div>'
               f'<div class="grid grid-4">{"".join(service_card(s, root) for s in svc)}</div></div></section>')
 
+        gallery_items = [
+            {"src": "assets/images/Bright Dean’s Office Waiting Hall.png",
+             "alt": "Bright waiting hall in the Dean’s Office",
+             "caption": "Dean’s Office waiting hall"},
+            {"src": "assets/images/Bright Clinic Corridor Waiting Area.png",
+             "alt": "Bright clinic corridor waiting area",
+             "caption": "Clinic corridor waiting area"},
+        ]
+        s_gallery = (f'<section class="section section-soft" id="gallery" aria-labelledby="gal-h"><div class="container">'
+                     f'{section_head("Dean’s Office Gallery", "A look at student support spaces at TUM.")}'
+                     f'{gallery(gallery_items, root, "the Dean’s Office")}</div></section>')
+
         staff = D["staff"]
         cards = "".join(staff_card(p, root) for p in staff)
         more = ""
@@ -603,11 +615,11 @@ def build_dean():
               f'<div class="section-head centered"><div><span class="gold-bar" aria-hidden="true"></span>'
               f'<h2 id="staff-h">Our Staff</h2><p>Meet the team at the Dean\'s Office.</p></div></div>'
               f'{staff_html}</div></section>')
-        return h + s1 + s2 + s3
+        return h + s1 + s2 + s3 + s_gallery
 
     page("deans-office/index.html", "Dean's Office | Karibu TUM",
          "The Office of the Dean of Students at Technical University of Mombasa: the Dean, student services and the team.",
-         "dean", body)
+         "dean", body, lightbox=True)
 
 
 def build_life():
