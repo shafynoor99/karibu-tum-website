@@ -16,13 +16,50 @@
   },
 
   "dean": {
-    "name": "Mr. Joel Oluoch Awino",
-    "role": "Dean of Students",
-    "initials": "JA",
-    "portrait": null,
-    "portrait_alt": "Portrait of Mr. Joel Oluoch Awino, Dean of Students",
-    "summary": "The Dean of Students heads the student services department, which is responsible for student welfare matters at Technical University of Mombasa. The Dean's Office works closely with other service departments across the University.",
-    "message": null
+    "name": "Dr. Soud Alli Tengah, PsyD",
+    "role": "Acting Dean of Students | Clinical Psychologist | Mental Health Researcher",
+    "initials": "ST",
+    "portrait": "assets/images/Dr Sudi transparent.png",
+    "portrait_alt": "Portrait of Dr. Soud Alli Tengah, PsyD, Acting Dean of Students",
+    "summary": "Dr. Soud Alli Tengah, PsyD, is a licensed Clinical Psychologist, researcher, and mental health systems leader with over 12 years of experience across East Africa.",
+    "biography": [
+      "Dr. Soud Alli Tengah is a licensed Clinical Psychologist, researcher, and mental health systems leader with over 12 years of experience in clinical practice, research, training, and programme development across East Africa.",
+      "He provides leadership in student welfare, mental health promotion, and counselling services at the Technical University of Mombasa (TUM), supporting a university community of more than 21,000 students and 800 staff members.",
+      "With expertise in clinical psychology and mental health systems development, Dr. Tengah champions accessible, inclusive, and evidence-based support services. His work encompasses mental health promotion, counselling, early intervention, crisis response, psychological assessment, and referral services.",
+      "He is also committed to strengthening professional development through mentorship, clinical supervision, internships, and collaboration with universities and mental health training institutions.",
+      "An accomplished researcher, Dr. Tengah has published in peer-reviewed journals covering adolescent and emerging adult mental health, depression, anxiety, substance use, stigma reduction, HIV programming, and health systems strengthening."
+    ],
+    "focus_areas": [
+      {
+        "title": "Student Welfare and Well-being",
+        "description": "Promoting a supportive university environment that enables students to thrive academically, socially, and personally."
+      },
+      {
+        "title": "Mental Health and Counselling",
+        "description": "Strengthening access to professional counselling, psychological support, early intervention, and referral services."
+      },
+      {
+        "title": "Workplace Wellness",
+        "description": "Championing staff well-being, resilience, productivity, and work-life balance."
+      },
+      {
+        "title": "Research and Innovation",
+        "description": "Advancing evidence-based approaches to mental health promotion and service delivery."
+      },
+      {
+        "title": "Mentorship and Professional Development",
+        "description": "Supporting the next generation of counselling psychologists and mental health practitioners."
+      }
+    ],
+    "message": null,
+    "message_paragraphs": [
+      "I believe that mental health and well-being are fundamental to academic excellence, personal growth, healthy relationships, and workplace productivity.",
+      "At the Technical University of Mombasa, our commitment is to foster an inclusive and supportive university community where every student and staff member feels valued, supported, and empowered to reach their full potential.",
+      "Through accessible student support services, effective counselling, mental health promotion, and collaborative partnerships, we strive to create an environment in which individuals can overcome challenges, flourish, and contribute meaningfully to society."
+    ],
+    "message_signature": "Dr. Soud Alli Tengah, PsyD",
+    "message_attribution": "Acting Dean of Students",
+    "message_institution": "Technical University of Mombasa"
   },
 
   "student_life": [
@@ -563,11 +600,11 @@
 
   "staff": [
     {
-      "name": "Mr. Joel Oluoch Awino",
-      "role": "Dean of Students",
-      "initials": "JA",
-      "portrait": null,
-      "portrait_alt": "Portrait of Mr. Joel Oluoch Awino, Dean of Students",
+      "name": "Dr. Soud Alli Tengah, PsyD",
+      "role": "Acting Dean of Students",
+      "initials": "ST",
+      "portrait": "assets/images/Dr Sudi transparent.png",
+      "portrait_alt": "Portrait of Dr. Soud Alli Tengah, PsyD, Acting Dean of Students",
       "email": "deanofstudents@tum.ac.ke",
       "phone": null
     }

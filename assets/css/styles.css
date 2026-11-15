@@ -237,6 +237,8 @@ a:hover { color: var(--color-green-dark); }
 /* ---------- Dean ---------- */
 .dean-grid { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
 .dean-grid.two { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); }
+.dean-profile-grid { align-items: start; }
+.dean-profile-grid .side-panel { grid-column: 1 / -1; }
 .portrait { aspect-ratio: 4 / 5; border-radius: var(--radius-lg); overflow: hidden; background: #fff; border: 1px solid var(--color-border); box-shadow: var(--shadow-card); }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
 .portrait .avatar { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--brand-green); background: radial-gradient(circle at 80% 12%, rgba(216,152,55,0.25) 0 60px, transparent 61px), var(--color-green-soft); }
@@ -244,7 +246,10 @@ a:hover { color: var(--color-green-dark); }
 .dean-name { font-size: 1.125rem; font-weight: 700; color: var(--color-text); margin-bottom: 2px; }
 .dean-role { color: var(--color-muted); margin-bottom: 16px; }
 .dean-copy h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: 10px; }
+.dean-copy > h3 { font-size: 1.125rem; margin: 20px 0 8px; }
 .dean-copy p { max-width: 58ch; }
+.dean-focus-list { display: grid; gap: 10px; margin: 0 0 20px; padding-left: 20px; list-style: disc; color: var(--color-muted); }
+.dean-focus-list strong { color: var(--color-text); }
 .side-panel { background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 24px; }
 .side-panel h3 { font-size: 1.25rem; margin-bottom: 4px; }
 .side-panel > p { color: var(--color-muted); font-size: 0.95rem; }
@@ -255,6 +260,8 @@ a:hover { color: var(--color-green-dark); }
 .message-box { border-left: 4px solid var(--brand-gold); background: var(--color-gold-soft); padding: 16px 18px; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-top: 20px; }
 .message-box h3 { font-size: 1.0625rem; margin-bottom: 4px; }
 .message-box p { margin: 0; color: var(--color-muted); font-size: 0.975rem; }
+.message-box p + p { margin-top: 10px; }
+.message-box .message-signature { margin-top: 14px; color: var(--color-text); font-weight: 600; }
 @media (max-width: 1024px) { .dean-grid { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); } .dean-grid .side-panel { grid-column: 1 / -1; } }
 @media (max-width: 720px) { .dean-grid, .dean-grid.two { grid-template-columns: 1fr; gap: 28px; } .portrait { max-width: 340px; } }
 

@@ -491,7 +491,21 @@ def notices_block(root, limit=None):
 def dean_about(root, heading_level_h2=True, full=False):
     dn = D["dean"]
     msg = dn.get("message")
-    if msg:
+    message_paragraphs = dn.get("message_paragraphs", [])
+    if message_paragraphs:
+        message_html = "".join(f'<p>{e(paragraph)}</p>' for paragraph in message_paragraphs)
+        signature = dn.get("message_signature")
+        attribution = dn.get("message_attribution")
+        institution = dn.get("message_institution")
+        if signature or attribution or institution:
+            signature_html = f'<strong>{e(signature)}</strong>' if signature else ""
+            if attribution:
+                signature_html += f'<br>{e(attribution)}'
+            if institution:
+                signature_html += f'<br>{e(institution)}'
+            message_html += f'<p class="message-signature">{signature_html}</p>'
+        msg_html = f'<div class="message-box"><h3>A message from the Acting Dean</h3>{message_html}</div>'
+    elif msg:
         msg_html = f'<div class="message-box"><h3>A message from the Dean</h3><p>{e(msg)}</p></div>'
     else:
         msg_html = ('<div class="message-box"><h3>A message from the Dean</h3>'
@@ -529,7 +543,7 @@ def build_home():
         mini = "".join(f'<a href="{L(root, "student-services/" + s["slug"])}">{ic(s["icon"])}<span>{e(s["title"])}</span></a>' for s in svc)
         s2 = (f'<section class="section section-green" id="about-dean" aria-labelledby="dean-h"><div class="container"><div class="dean-grid">'
               f'{portrait(dn, root)}'
-              f'<div class="dean-copy"><span class="gold-bar" aria-hidden="true"></span><h2 id="dean-h">About the Dean</h2>'
+              f'<div class="dean-copy"><span class="gold-bar" aria-hidden="true"></span><h2 id="dean-h">About the Acting Dean</h2>'
               f'<p class="dean-name">{e(dn["name"])}</p><p class="dean-role">{e(dn["role"])}</p>'
               f'<p>{e(dn["summary"])}</p>'
               f'<a class="btn btn-primary" href="{L(root, "deans-office", "about-dean")}">Learn more about the Dean {ic("arrow")}</a></div>'
@@ -566,12 +580,25 @@ def build_dean():
     def body(root):
         dn, msg_html = dean_about(root)
         svc = D["student_services"]
+        biography_html = "".join(
+            f'<p>{e(paragraph)}</p>' for paragraph in dn.get("biography", [dn["summary"]])
+        )
+        focus_areas = dn.get("focus_areas", [])
+        focus_html = ""
+        if focus_areas:
+            focus_items = "".join(
+                f'<li><strong>{e(item["title"])}:</strong> {e(item["description"])}</li>'
+                for item in focus_areas
+            )
+            focus_html = (f'<h3>Leadership and Areas of Focus</h3>'
+                          f'<ul class="dean-focus-list">{focus_items}</ul>')
         h = hero("Dean's Office",
                  "The Office of the Dean of Students looks after student welfare at Technical University of Mombasa and works with other departments so you can study, live and stay well on campus.",
                  root, tagline="Office of the Dean of Students",
                  actions=(f'<a class="btn btn-primary" href="#services">Explore our services {ic("arrow")}</a>'
                           f'<a class="btn btn-secondary" href="{L(root, "contact-support")}">Contact the office</a>'),
-                 background_photo="assets/images/Bright Dean’s Office Waiting Hall.png",
+                 photo="assets/images/Bright Dean’s Office Waiting Hall.png",
+                 photo_alt="Dean’s Office waiting hall",
                  crumbs=breadcrumbs(root, [("Home", L(root)), ("Dean's Office", "")]))
 
         reach = (f'<div class="side-panel"><h3>Reach the office</h3><p>Contact details for general enquiries.</p>'
@@ -580,11 +607,11 @@ def build_dean():
                  f'{fact("phone", "Phone", plain_tel())}'
                  f'{fact("pin", "Location", e(S["address"]) + "<br>" + e(S["po_box"]))}'
                  f'</dl></div>')
-        s1 = (f'<section class="section" id="about-dean" aria-labelledby="dean-h"><div class="container"><div class="dean-grid">'
+        s1 = (f'<section class="section" id="about-dean" aria-labelledby="dean-h"><div class="container"><div class="dean-grid two dean-profile-grid">'
               f'{portrait(dn, root)}'
-              f'<div class="dean-copy"><span class="gold-bar" aria-hidden="true"></span><h2 id="dean-h">About the Dean</h2>'
+              f'<div class="dean-copy"><span class="gold-bar" aria-hidden="true"></span><h2 id="dean-h">About the Acting Dean</h2>'
               f'<p class="dean-name">{e(dn["name"])}</p><p class="dean-role">{e(dn["role"])}</p>'
-              f'<p>{e(dn["summary"])}</p>{msg_html}</div>{reach}</div></div></section>')
+              f'{biography_html}{focus_html}{msg_html}</div>{reach}</div></div></section>')
 
         s2 = (f'<section class="section section-green" id="services" aria-labelledby="svc-h"><div class="container">'
               f'<div class="section-head centered"><div><span class="gold-bar" aria-hidden="true"></span>'
