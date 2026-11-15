@@ -580,9 +580,9 @@ def build_dean():
     def body(root):
         dn, msg_html = dean_about(root)
         svc = D["student_services"]
-        biography_html = "".join(
-            f'<p>{e(paragraph)}</p>' for paragraph in dn.get("biography", [dn["summary"]])
-        )
+        biography = dn.get("biography") or [dn["summary"]]
+        lead_html = f'<p>{e(biography[0])}</p>'
+        biography_html = "".join(f'<p>{e(paragraph)}</p>' for paragraph in biography[1:])
         focus_areas = dn.get("focus_areas", [])
         focus_html = ""
         if focus_areas:
@@ -590,8 +590,8 @@ def build_dean():
                 f'<li><strong>{e(item["title"])}:</strong> {e(item["description"])}</li>'
                 for item in focus_areas
             )
-            focus_html = (f'<h3>Leadership and Areas of Focus</h3>'
-                          f'<ul class="dean-focus-list">{focus_items}</ul>')
+            focus_html = (f'<div class="dean-focus-block"><h3>Leadership and Areas of Focus</h3>'
+                          f'<ul class="dean-focus-list">{focus_items}</ul></div>')
         h = hero("Dean's Office",
                  "The Office of the Dean of Students looks after student welfare at Technical University of Mombasa and works with other departments so you can study, live and stay well on campus.",
                  root, tagline="Office of the Dean of Students",
@@ -601,17 +601,19 @@ def build_dean():
                  photo_alt="Dean’s Office waiting hall",
                  crumbs=breadcrumbs(root, [("Home", L(root)), ("Dean's Office", "")]))
 
-        reach = (f'<div class="side-panel"><h3>Reach the office</h3><p>Contact details for general enquiries.</p>'
+        reach = (f'<div class="side-panel dean-contact-panel"><h3>Reach the office</h3><p>Contact details for general enquiries.</p>'
                  f'<dl class="fact-list" style="margin-top:14px">'
                  f'{fact("mail", "Email", plain_mail(S["email_dean"]))}'
                  f'{fact("phone", "Phone", plain_tel())}'
                  f'{fact("pin", "Location", e(S["address"]) + "<br>" + e(S["po_box"]))}'
                  f'</dl></div>')
-        s1 = (f'<section class="section" id="about-dean" aria-labelledby="dean-h"><div class="container"><div class="dean-grid two dean-profile-grid">'
-              f'{portrait(dn, root)}'
-              f'<div class="dean-copy"><span class="gold-bar" aria-hidden="true"></span><h2 id="dean-h">About the Acting Dean</h2>'
-              f'<p class="dean-name">{e(dn["name"])}</p><p class="dean-role">{e(dn["role"])}</p>'
-              f'{biography_html}{focus_html}{msg_html}</div>{reach}</div></div></section>')
+        s1 = (f'<section class="section dean-profile-section" id="about-dean" aria-labelledby="dean-h"><div class="container">'
+              f'<div class="dean-profile-layout">{portrait(dn, root)}'
+              f'<div class="dean-copy dean-profile-intro"><span class="gold-bar" aria-hidden="true"></span>'
+              f'<h2 id="dean-h">About the Acting Dean</h2><p class="dean-name">{e(dn["name"])}</p>'
+              f'<p class="dean-role">{e(dn["role"])}</p>{lead_html}</div></div>{reach}'
+              f'<div class="dean-profile-details"><div class="dean-biography">{biography_html}</div>'
+              f'{focus_html}</div>{msg_html}</div></section>')
 
         s2 = (f'<section class="section section-green" id="services" aria-labelledby="svc-h"><div class="container">'
               f'<div class="section-head centered"><div><span class="gold-bar" aria-hidden="true"></span>'
