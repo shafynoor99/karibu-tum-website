@@ -68,8 +68,8 @@
       "title": "Clubs & Societies",
       "icon": "users",
       "short": "Join student groups built around shared interests, talents and causes.",
-      "image": null,
-      "image_alt": "",
+      "image": "assets/images/civil club.jpg",
+      "image_alt": "Civil Engineering Club students at TUM",
       "hero_intro": "Find people who share your interests and build friendships and skills beyond the classroom.",
       "about": [
         "The Technical University of Mombasa (TUM) features a wide variety of student-led clubs, academic associations, tech communities, and religious groups that help students build practical skills, network, and engage in campus life."
