@@ -107,8 +107,9 @@
                 "description": "A Christian student fellowship, alongside other campus ministry and outreach fellowships."
               },
               {
-                "name": "Muslim Students Association",
-                "description": "One of the campus faith-based student organizations, alongside other faith-based groups."
+                "name": "Muslim Union",
+                "description": "One of the campus faith-based student organizations, alongside other faith-based groups.",
+                "venue": "TUMMIS Building, around the ICI Building, near the garden."
               }
             ]
           },
@@ -124,7 +125,23 @@
         ]
       },
       "location": null,
-      "gallery": []
+      "gallery": [
+        {
+          "src": "assets/images/muslim club.jpg",
+          "alt": "Muslim student club at TUM",
+          "caption": "Muslim Club"
+        },
+        {
+          "src": "assets/images/car.jpg",
+          "alt": "Car connected with student club activities",
+          "caption": "Student club car"
+        },
+        {
+          "src": "assets/images/civil club.jpg",
+          "alt": "Civil Engineering Club students at TUM",
+          "caption": "Civil Engineering Club"
+        }
+      ]
     },
     {
       "slug": "sports-recreation",

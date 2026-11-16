@@ -901,17 +901,26 @@ def build_life_detail(t):
                           f'{secondary_action}'),
                  photo=t["image"] if exists(t.get("image")) else None, crumbs=crumbs,
                  photo_alt=t.get("image_alt", ""))
-        loc = e(t["location"]) if t.get("location") else pending(S["location_pending"])
-        facts = (f'<aside class="facts" aria-label="Details"><h3>At a glance</h3><dl class="fact-list">'
-                 f'{fact("pin", "Location or venue", loc)}'
-                 f'{fact("mail", "Contact", e("Dean's Office (general enquiries)") + "<br>" + plain_mail(S["email_dean"]) + "<br>" + plain_tel())}'
-                 f'</dl></aside>')
+        clubs_details = t.get("clubs_details")
+        if clubs_details:
+            venue_items = "".join(
+                f'<div><dt>{e(item["name"])}</dt><dd>{e(item.get("venue") or "Venue to be confirmed")}</dd></div>'
+                for section in clubs_details["sections"]
+                for item in section["items"]
+            )
+            facts = (f'<aside class="facts" aria-label="Club venues"><h3>Club venues</h3>'
+                     f'<dl class="fact-list club-venue-list">{venue_items}</dl></aside>')
+        else:
+            loc = e(t["location"]) if t.get("location") else pending(S["location_pending"])
+            facts = (f'<aside class="facts" aria-label="Details"><h3>At a glance</h3><dl class="fact-list">'
+                     f'{fact("pin", "Location or venue", loc)}'
+                     f'{fact("mail", "Contact", e("Dean's Office (general enquiries)") + "<br>" + plain_mail(S["email_dean"]) + "<br>" + plain_tel())}'
+                     f'</dl></aside>')
         paras = "".join(f"<p>{e(p)}</p>" for p in t["about"])
         s1 = (f'<section class="section" id="about" aria-labelledby="about-h"><div class="container"><div class="detail-grid">'
               f'<div class="prose"><span class="gold-bar" aria-hidden="true"></span><h2 id="about-h">About {e(t["title"])}</h2>{paras}'
               f'<div class="callout"><h3>How to take part</h3><p>{e(t["participate"])}</p></div></div>{facts}</div></div></section>')
         clubs = ""
-        clubs_details = t.get("clubs_details")
         if clubs_details:
             club_cards = []
             for section in clubs_details["sections"]:

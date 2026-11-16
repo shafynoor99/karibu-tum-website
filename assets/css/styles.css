@@ -422,6 +422,10 @@ a:hover { color: var(--color-green-dark); }
 .fact dd a { font-weight: 600; }
 .fact .pending { display: inline-flex; align-items: center; gap: 6px; font-style: normal; }
 .fact-list { margin: 0; display: grid; gap: 18px; }
+.club-venue-list { gap: 10px; }
+.club-venue-list > div { padding-bottom: 10px; border-bottom: 1px solid var(--color-border); }
+.club-venue-list > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.club-venue-list dt, .club-venue-list dd { font-size: 0.875rem; }
 .alert { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 12px; padding: 14px 16px; border-radius: var(--radius-md); background: var(--color-gold-soft); border: 1px solid var(--brand-gold); color: #4a3008; margin-top: 20px; }
 .alert strong { color: #4a3008; }
 .alert .icon { margin-top: 2px; }
