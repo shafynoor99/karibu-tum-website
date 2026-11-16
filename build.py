@@ -168,6 +168,8 @@ def fmt_date(iso, fmt):
 def event_row(ev, root):
     d = ev.get("date", "")
     meta = ""
+    if ev.get("date_label"):
+        meta += f'<span>{ic("calendar")}{e(ev["date_label"])}</span>'
     if ev.get("time"):
         meta += f'<span>{ic("clock")}{e(ev["time"])}</span>'
     if ev.get("venue"):
@@ -179,10 +181,37 @@ def event_row(ev, root):
                 f'>{e(ev.get("link_label", "Event details"))} {ic("external" if ext else "arrow")}'
                 + ('<span class="visually-hidden"> (opens in a new tab)</span>' if ext else "") + "</a>")
     img = f'<img src="{root}{ev["image"]}" alt="{e(ev.get("image_alt", ""))}" loading="lazy">' if exists(ev.get("image")) else ""
-    return (f'<li class="event-row"><div class="date-badge"><span class="m">{e(fmt_date(d, "%b"))}</span>'
-            f'<span class="d">{e(fmt_date(d, "%d"))}</span><span class="visually-hidden">{e(fmt_date(d, "%A %d %B %Y"))}</span></div>'
+    date_badge = (f'<div class="date-badge"><span class="m">{e(fmt_date(d, "%b"))}</span>'
+                  f'<span class="d">{e(fmt_date(d, "%d"))}</span>'
+                  f'<span class="visually-hidden">{e(fmt_date(d, "%A %d %B %Y"))}</span></div>'
+                  if d else "")
+    row_class = "event-row" if d else "event-row event-row-no-date"
+    return (f'<li class="{row_class}">{date_badge}'
             f'<div><h4>{e(ev["title"])}</h4><div class="event-meta">{meta}</div>'
             f'{"<p>" + e(ev["description"]) + "</p>" if ev.get("description") else ""}{link}{img}</div></li>')
+
+
+def event_card(ev, root):
+    if exists(ev.get("image")):
+        media = f'<img src="{root}{ev["image"]}" alt="{e(ev.get("image_alt", ""))}" loading="lazy">'
+    else:
+        media = f'<div class="event-card-art" aria-hidden="true">{ic(ev.get("icon", "calendar"))}</div>'
+    letter = ev.get("letter")
+    if exists(letter):
+        action = (f'<a class="btn btn-primary" href="{root}{letter}" download '
+                  f'aria-label="Download signed event letter for {e(ev["title"])}">'
+                  f'{ic("download")}Download</a>')
+        status = ""
+    else:
+        action = (f'<button class="btn btn-primary" type="button" disabled '
+                  f'aria-label="Download letter for {e(ev["title"])}; letter coming soon">'
+                  f'{ic("download")}Download</button>')
+        status = '<span class="event-letter-status">Letter coming soon</span>'
+    return (f'<article class="event-card"><div class="event-card-media">{media}</div>'
+            f'<div class="event-card-body"><h3>{e(ev["title"])}</h3>'
+            f'<div class="event-card-meta"><span>{ic("calendar")}{e(ev.get("date_label", "Date in signed letter"))}</span>'
+            f'<span>{ic("user")}Organized by {e(ev.get("organizer", "TUM"))}</span></div>'
+            f'<div class="event-card-action">{action}{status}</div></div></article>')
 
 
 def notice_row(a):
@@ -478,6 +507,15 @@ def events_block(root, limit=None, home=False):
     return f'<ul class="event-list">{"".join(event_row(x, root) for x in evs)}</ul>'
 
 
+def event_cards_block(root):
+    evs = D["events"]
+    if not evs:
+        return empty("calendar", "No events scheduled yet",
+                     "Upcoming student events will be listed here as soon as they are confirmed.",
+                     ("Ask the Dean's Office about events", L(root, "contact-support", "enquiry")))
+    return f'<div class="grid grid-3 event-card-grid">{"".join(event_card(ev, root) for ev in evs)}</div>'
+
+
 def notices_block(root, limit=None):
     ann = sorted(D["announcements"], key=lambda x: x.get("date", ""), reverse=True)
     if limit:
@@ -681,10 +719,14 @@ def build_news():
                  "Notices from the Dean's Office, student events and the forms and documents you may need, all in one place.",
                  root, actions=(f'<a class="btn btn-primary" href="#events">See events {ic("arrow")}</a>'
                                 f'<a class="btn btn-secondary" href="#announcements">Read announcements</a>'),
-                 photo=find_first("assets/images/hero", {"announcements-events", "events"}),
+                 photo="assets/images/events.jpg",
+                 photo_alt="Student presenting a project at a Technical University of Mombasa event",
                  crumbs=breadcrumbs(root, [("Home", L(root)), ("Announcements & Events", "")]))
+        event_heading = ('<div class="event-feature-heading"><span>Upcoming &amp; Recent Events</span>'
+                         '<h2>Featured Events</h2>'
+                         '<p>Download official event letters for dates, venues, and full details.</p></div>')
         s1 = (f'<section class="section" id="events" aria-label="Events"><div class="container">'
-              f'{section_head("Events", "Scheduled activities for students.")}{events_block(root)}</div></section>')
+              f'{event_heading}{event_cards_block(root)}</div></section>')
         s2 = (f'<section class="section section-soft" id="announcements" aria-label="Announcements"><div class="container">'
               f'{section_head("Announcements", "Notices and updates. Important notices carry an Important label.")}'
               f'<div class="panel"><div class="panel-body">{notices_block(root)}</div></div></div></section>')

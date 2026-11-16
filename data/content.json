@@ -680,7 +680,58 @@
     }
   ],
 
-  "events": [],
+  "events": [
+    {
+      "title": "12th Graduation Ceremony",
+      "date_label": "Date & venue in signed letter",
+      "organizer": "TUM",
+      "icon": "star",
+      "image": "assets/images/graduation.jpg",
+      "image_alt": "Graduating students gathered for a TUM graduation ceremony",
+      "letter": null
+    },
+    {
+      "title": "Kupaa Music Festivals",
+      "date_label": "Date & venue in signed letter",
+      "organizer": "TUM",
+      "icon": "users",
+      "letter": null
+    },
+    {
+      "title": "E-Registrar Orientations and Intake Activities",
+      "date_label": "Date & venue in signed letter",
+      "organizer": "TUM",
+      "icon": "calendar",
+      "letter": null
+    },
+    {
+      "title": "TUM Tech and Engineering Week (Open and Learn)",
+      "date_label": "Date & venue in signed letter",
+      "organizer": "TUM",
+      "icon": "info",
+      "image": "assets/images/events.jpg",
+      "image_alt": "A student presenting a project at a Technical University of Mombasa event",
+      "letter": null
+    },
+    {
+      "title": "Multidisciplinary Conference and Innovation Week",
+      "date_label": "Date & venue in signed letter",
+      "organizer": "TUM",
+      "icon": "star",
+      "image": "assets/images/multi displinary.jpg",
+      "image_alt": "Participants at a TUM multidisciplinary conference",
+      "letter": null
+    },
+    {
+      "title": "Mombasa International OSH Conference",
+      "date_label": "Date & venue in signed letter",
+      "organizer": "TUM",
+      "icon": "health",
+      "image": "assets/images/osch conference.jpg",
+      "image_alt": "Participants attending a conference at TUM",
+      "letter": null
+    }
+  ],
   "announcements": [],
   "resources": []
 }
