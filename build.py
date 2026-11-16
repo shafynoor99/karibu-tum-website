@@ -910,6 +910,24 @@ def build_life_detail(t):
         s1 = (f'<section class="section" id="about" aria-labelledby="about-h"><div class="container"><div class="detail-grid">'
               f'<div class="prose"><span class="gold-bar" aria-hidden="true"></span><h2 id="about-h">About {e(t["title"])}</h2>{paras}'
               f'<div class="callout"><h3>How to take part</h3><p>{e(t["participate"])}</p></div></div>{facts}</div></div></section>')
+        clubs = ""
+        clubs_details = t.get("clubs_details")
+        if clubs_details:
+            club_cards = []
+            for section in clubs_details["sections"]:
+                items = "".join(
+                    f'<li><strong>{e(item["name"])}</strong> {e(item["description"])}</li>'
+                    for item in section["items"]
+                )
+                club_cards.append(
+                    f'<article class="association-card"><h3>{e(section["title"])}</h3><ul>{items}</ul></article>'
+                )
+            clubs = (
+                f'<section class="section section-soft" id="clubs" aria-labelledby="clubs-h"><div class="container">'
+                f'<div class="section-head"><div><span class="gold-bar" aria-hidden="true"></span>'
+                f'<h2 id="clubs-h">Prominent Clubs and Societies at TUM</h2></div></div>'
+                f'<div class="grid grid-2 association-grid">{"".join(club_cards)}</div></div></section>'
+            )
         association = ""
         association_details = t.get("association_details")
         if association_details:
@@ -970,7 +988,7 @@ def build_life_detail(t):
               f'<div class="section-head"><div><span class="gold-bar" aria-hidden="true"></span><h2 id="rel-h">Related Student Life</h2>'
               f'<p>More ways to get involved.</p></div>'
               f'<a class="btn btn-soft" href="{L(root, "student-life")}">All of Student Life {ic("arrow")}</a></div>{rel_html}</div></section>')
-        return h + s1 + association + sports_section + s2 + s3
+        return h + s1 + clubs + association + sports_section + s2 + s3
 
     page(f"student-life/{t['slug']}/index.html", f"{t['title']} | Student Life | Karibu TUM",
          t["short"], "life", body, lightbox=bool(t["gallery"]))

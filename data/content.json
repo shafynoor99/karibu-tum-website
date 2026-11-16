@@ -72,10 +72,57 @@
       "image_alt": "",
       "hero_intro": "Find people who share your interests and build friendships and skills beyond the classroom.",
       "about": [
-        "Clubs and societies bring students together around shared interests, talents and causes. They are a way to meet people across programmes, practise leadership and try something new alongside your studies.",
-        "The Dean's Office can point you to the clubs and societies that are active this semester."
+        "The Technical University of Mombasa (TUM) features a wide variety of student-led clubs, academic associations, tech communities, and religious groups that help students build practical skills, network, and engage in campus life."
       ],
-      "participate": "Joining details for each club are to be confirmed. Contact the Dean's Office to find out which groups are active and how to join.",
+      "participate": "Check current registration lists, sign up for activities, or reach out through the TUM Clubs and Societies Office or campus student life portals. Contact the Dean's Office for current information about active groups.",
+      "clubs_details": {
+        "sections": [
+          {
+            "title": "Academic and Professional Clubs",
+            "items": [
+              {
+                "name": "Civil Engineering Club",
+                "description": "An active student chapter that partners with industry organizations like the Kenya National Highways Authority (KeNHA) Coast Region for site visits, mentorship, and practical training."
+              }
+            ]
+          },
+          {
+            "title": "Tech and Innovation Communities",
+            "items": [
+              {
+                "name": "GDG on Campus TUM",
+                "description": "Part of the Google Developer Groups network, focusing on peer-to-peer learning around web development, Google Cloud, and open-source tech."
+              },
+              {
+                "name": "AWS Student Builder Group (AWS SBG)",
+                "description": "A student-led community focused on cloud computing, AI, security, and hands-on AWS projects."
+              }
+            ]
+          },
+          {
+            "title": "Faith-Based and Fellowship Groups",
+            "items": [
+              {
+                "name": "Technical University of Mombasa Christian Union (TUMCU)",
+                "description": "A Christian student fellowship, alongside other campus ministry and outreach fellowships."
+              },
+              {
+                "name": "Muslim Students Association",
+                "description": "One of the campus faith-based student organizations, alongside other faith-based groups."
+              }
+            ]
+          },
+          {
+            "title": "Social and Talent-Based Groups",
+            "items": [
+              {
+                "name": "Cultural, environmental, debate, and performing arts societies",
+                "description": "A diverse range of student groups for exploring shared interests, causes, and talents."
+              }
+            ]
+          }
+        ]
+      },
       "location": null,
       "gallery": []
     },
