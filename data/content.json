@@ -76,6 +76,12 @@
       ],
       "participate": "Check current registration lists, sign up for activities, or reach out through the TUM Clubs and Societies Office or campus student life portals. Contact the Dean's Office for current information about active groups.",
       "clubs_details": {
+        "why_join": [
+          "Build practical skills through hands-on activities.",
+          "Meet students from other programmes and grow your network.",
+          "Explore interests and talents beyond the classroom.",
+          "Strengthen teamwork, confidence, and leadership."
+        ],
         "sections": [
           {
             "title": "Academic and Professional Clubs",

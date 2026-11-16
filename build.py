@@ -916,10 +916,15 @@ def build_life_detail(t):
                      f'{fact("pin", "Location or venue", loc)}'
                      f'{fact("mail", "Contact", e("Dean's Office (general enquiries)") + "<br>" + plain_mail(S["email_dean"]) + "<br>" + plain_tel())}'
                      f'</dl></aside>')
+        why_join = ""
+        if clubs_details and clubs_details.get("why_join"):
+            benefits = "".join(f"<li>{e(benefit)}</li>" for benefit in clubs_details["why_join"])
+            why_join = (f'<div class="callout club-benefits"><h3>Why get involved?</h3>'
+                        f'<ul>{benefits}</ul></div>')
         paras = "".join(f"<p>{e(p)}</p>" for p in t["about"])
         s1 = (f'<section class="section" id="about" aria-labelledby="about-h"><div class="container"><div class="detail-grid">'
               f'<div class="prose"><span class="gold-bar" aria-hidden="true"></span><h2 id="about-h">About {e(t["title"])}</h2>{paras}'
-              f'<div class="callout"><h3>How to take part</h3><p>{e(t["participate"])}</p></div></div>{facts}</div></div></section>')
+              f'<div class="callout"><h3>How to take part</h3><p>{e(t["participate"])}</p></div>{why_join}</div>{facts}</div></div></section>')
         clubs = ""
         if clubs_details:
             club_cards = []
