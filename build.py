@@ -696,7 +696,8 @@ def build_life():
                  "Join in, find your community and make time to play. Student life at TUM is about participation, recreation and belonging.",
                  root, actions=(f'<a class="btn btn-primary" href="#about-life">Explore opportunities {ic("arrow")}</a>'
                                 f'<a class="btn btn-secondary" href="#student-services">Student services</a>'),
-                 photo=find_first("assets/images/hero", {"student-life"}),
+                 photo="assets/images/student-life/games 04.jpeg",
+                 photo_alt="TUM students playing basketball on campus",
                  crumbs=breadcrumbs(root, [("Home", L(root)), ("Student Life", "")]))
         s1 = (f'<section class="section" id="about-life" aria-labelledby="about-h"><div class="container">'
               f'{section_head("About Student Life", "Clubs, sport and your students’ association: ways to take part beyond the classroom.")}'
